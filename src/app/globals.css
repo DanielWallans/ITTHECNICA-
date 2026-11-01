@@ -1,16 +1,26 @@
 @import "tailwindcss";
 
-:root {
-  --font-sans: var(--font-dm-sans);
-  --font-heading: var(--font-space-grotesk);
-  --color-orange: #ff7417;
-  --color-orange2: #ff9b35;
+/* Paleta derivada do hero: carvão quente, creme e laranja de marca */
+@theme inline {
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), system-ui, sans-serif;
+
+  --color-ink: #0b0908;
+  --color-coal: #14100d;
+  --color-umber: #1d1714;
+  --color-cream: #efe7de;
+  --color-sand: #a8998b;
+  --color-dust: #6f645a;
+  --color-line: rgba(239, 231, 222, 0.12);
+  --color-brand: #ff7a1a;
+  --color-brand-soft: #ffb070;
 }
 
 body {
   font-family: var(--font-dm-sans), sans-serif;
-  background-color: #08090b;
-  color: #f5f5f2;
+  background-color: #0b0908;
+  color: #efe7de;
 }
 
 h1,
@@ -20,7 +30,7 @@ h3,
   font-family: var(--font-space-grotesk), sans-serif;
 }
 
-/* Ruído sutil cinematográfico */
+/* Grão de filme sutil */
 .noise-overlay {
   position: fixed;
   inset: 0;
@@ -30,15 +40,13 @@ h3,
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
 }
 
-/* Barra de progresso de scroll do topo */
 .scroll-progress-bar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #ff7417, #ff9b35);
-  box-shadow: 0 0 12px #ff7417;
+  background: #ff7a1a;
   transform-origin: 0%;
   z-index: 100;
 }

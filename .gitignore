@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
-# typescript
+# build
 *.tsbuildinfo
-next-env.d.ts
+
+# material de referência do Claude Design
+/Hero section Igloo inspired/
+/Hero section Igloo inspired.zip
